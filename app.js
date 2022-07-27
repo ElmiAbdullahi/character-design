@@ -33,21 +33,23 @@ headDropdown.addEventListener('change', () => {
 middleDropdown.addEventListener('change', () => {
     // get the value of the middle dropdown
     console.log('body was changed');
+    console.log(middleDropdown.value);
     // increment the middle change count state
-    console.log()
+    middleNumber = middleNumber + 1;
     // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    middleEl.style.backgroundImage = `url(/assets/${middleDropdown.value}-middle.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
 });
 
 
 bottomDropdown.addEventListener('change', () => {
     // get the value of the bottom dropdown
-
+    console.log('bottom was changed');
+    console.log(bottomDropdown.value);
     // increment the bottom change count state
-    
+    bottomDropdown = bottomNumber + 1;
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    bottomEl.style.backgroundImage = `url(/assets/${bottomDropdown.value}-bottom.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
 });
 
