@@ -20,8 +20,7 @@ let catchphrases = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
-    console.log('head was changed');
-    console.log(headDropdown.value);
+
     // increment the head change count state
     headNumber = headNumber + 1;
     // update the dom for the head (use style.backgroundImage on the headEl div instead of trying to set the .src -- it's NOT an img tag!)
@@ -34,8 +33,7 @@ headDropdown.addEventListener('change', () => {
 
 middleDropdown.addEventListener('change', () => {
     // get the value of the middle dropdown
-    console.log('body was changed');
-    console.log(middleDropdown.value);
+    
     // increment the middle change count state
     middleNumber = middleNumber + 1;
     // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
@@ -47,8 +45,6 @@ middleDropdown.addEventListener('change', () => {
 
 bottomDropdown.addEventListener('change', () => {
     // get the value of the bottom dropdown
-    console.log('bottom was changed');
-    console.log(bottomDropdown.value);
     // increment the bottom change count state
     bottomNumber = bottomNumber + 1;
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
@@ -64,8 +60,7 @@ catchphraseButton.addEventListener('click', () => {
     catchphrases.push(newCatchPhrase);
     // clear out the form input's value so it's empty to the user
     catchphraseInput.value = '';
-    // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
-    console.log(newCatchPhrase);
+    // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work
     displayStats();
     displayCatchphrases();
 
